@@ -1,0 +1,13 @@
+name: bbtest-artifact
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo bbtest-artifact-probe > f.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bbtest
+          path: f.txt
