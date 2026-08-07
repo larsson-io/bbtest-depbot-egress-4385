@@ -2,8 +2,7 @@ version: 2
 registries:
   bbtest-npm:
     type: npm-registry
-    url: https://npm.d9qpdi63586a5ur6ssn0iqdwx5symkoyk.oast.site
-    token: dummy-token
+    url: https://npm.d9qpa663586027ko0l00bsob14x4s381f.oast.me
 updates:
   - package-ecosystem: "npm"
     directory: "/"
