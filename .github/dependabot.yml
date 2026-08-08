@@ -2,7 +2,7 @@ version: 2
 registries:
   bbtest-npm:
     type: npm-registry
-    url: https://npm.d9r75v635869d01ju14gh6zr9u7m51mw5.oast.site
+    url: https://npm.placeholder.invalid
     token: ${{secrets.BBTEST_REG_TOKEN}}
 updates:
   - package-ecosystem: "npm"
