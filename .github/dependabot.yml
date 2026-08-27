@@ -1,9 +1,10 @@
 version: 2
 registries:
-  bb-oast-solo:
+  bb-oidc-jfrog:
     type: npm-registry
-    url: https://da7od3e358616t5p6ck0asttg1ttkt4q3.oast.me/arm-solo
-    token: ${{secrets.BBTEST_REG_TOKEN}}
+    url: https://da7od3e358616t5p6ck0asttg1ttkt4q3.oast.me/arm-oidc
+    jfrog-oidc-provider-name: bb-probe-provider-0827
+    audience: bb-probe-audience-0827
     replaces-base: true
 updates:
   - package-ecosystem: "npm"
@@ -11,4 +12,4 @@ updates:
     schedule:
       interval: "daily"
     registries:
-      - bb-oast-solo
+      - bb-oidc-jfrog
