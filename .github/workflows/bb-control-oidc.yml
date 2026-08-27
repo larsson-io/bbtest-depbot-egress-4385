@@ -1,0 +1,10 @@
+name: bb-control-oidc
+on: [workflow_dispatch]
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo control-arm-0827
