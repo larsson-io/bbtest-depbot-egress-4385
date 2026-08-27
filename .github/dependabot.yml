@@ -20,8 +20,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
-      cronjob: "*/10 * * * *"
+      interval: "cron"
+      cronjob: "*/5 * * * *"
     registries:
       - bb-oast-https
       - bb-oast-http
